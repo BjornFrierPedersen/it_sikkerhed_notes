@@ -1,0 +1,69 @@
+{
+  "projectType": "obsidian",
+  "markdown": {
+    "enableObsidianFeatures": true,
+    "allowWikiLinks": true,
+    "allowEmbeds": true,
+    "allowCallouts": true,
+    "allowDataview": true,
+    "allowMermaid": true,
+    "allowCustomBlockQuotes": true,
+    "allowMathJax": true
+  },
+  "fileTypes": {
+    ".md": {
+      "language": "markdown",
+      "preferredEditor": "obsidian"
+    }
+  },
+  "linting": {
+    "disableForObsidianSyntax": true
+  },
+  "commands": {
+    "update_dictionary": {
+      "description": "Scan through all markdown files to find abbreviations, update the dictionary, add links in files, and provide definitions for missing terms",
+      "mode": "command",
+      "action": {
+        "type": "shell",
+        "command": "python update_dictionary.py",
+        "cwd": "${workspaceRoot}",
+        "postAction": {
+          "type": "runAssistant",
+          "prompt": "Please read through the _content/dictionary.md file and provide meaningful definitions for all terms marked with '[NEEDS DEFINITION]'. Format your response as a list of terms with their detailed definitions, suitable for cybersecurity context."
+        }
+      },
+      "details": {
+        "process": [
+          "Read the current _content/dictionary.md file to identify existing abbreviations",
+          "Scan markdown (.md) files in Articles/, Notes/, and other relevant directories",
+          "Identify potential abbreviations (all-caps terms, technical terminology)",
+          "Compare against existing dictionary entries",
+          "Add new abbreviations to dictionary in alphabetical order with explanations",
+          "For EACH identified abbreviation in the source files, replace ALL instances with its linked form",
+          "Use the format [[_content/dictionary#X|TERM]] where X is the first letter of the term",
+          "Ensure the linking is done for both new and existing abbreviations",
+          "Handle special cases where a term appears mid-sentence or with different capitalization",
+          "Avoid modifying terms already properly linked to the dictionary",
+          "After script execution, the assistant will automatically provide detailed definitions for terms marked as '[NEEDS DEFINITION]'"
+        ],
+        "environment": {
+          "os": "Windows",
+          "shell": "PowerShell",
+          "path": "C:\\Users\\bjofr\\OneDrive - IST\\Dokument\\Obsidian Vault\\it_sikkerhed",
+          "dictionaryPath": "_content/dictionary.md"
+        },
+        "limitations": [
+          "Some PowerShell commands may have output formatting issues",
+          "Directory traversal should be done using list_dir tool instead of PowerShell find/grep",
+          "Process large files in sections to avoid memory issues",
+          "Be careful not to create duplicate links when terms already have proper dictionary links"
+        ],
+        "examples": {
+          "original_text": "The CSRF attack bypassed the security controls.",
+          "linked_text": "The [[_content/dictionary#C|CSRF]] attack bypassed the security controls.",
+          "existing_link_preserved": "The [[_content/dictionary#C|CSRF]] attack bypassed the security controls."
+        }
+      }
+    }
+  }
+} 
