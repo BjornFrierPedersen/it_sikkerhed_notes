@@ -2,7 +2,7 @@
 
 **Question:** 
 How do poor-quality initialization vectors affect the security of [[_content/dictionary#C|CBC]] mode?
-From what I have read (looking specifically at [[_content/dictionary#A|AES]] in Cipher Block Chaining mode), initialization vectors should be non-repeating, or better, under some circumstances at least, totally unpredictable. If we consider the following sequence of "weakening" [[_content/dictionary#I|IV]]s:
+From what I have read (looking specifically at [[_content/dictionary#A|AES]] in Cipher Block Chaining mode), initialization vectors should be non-repeating, or better, under some circumstances at least, totally unpredictable. If we consider the following sequence of "weakening" IVs:
 
 Cryptographically sound random number
 

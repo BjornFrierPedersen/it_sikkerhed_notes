@@ -33,16 +33,16 @@ Windows Access Controls are mechanisms that manage how users and processes inter
   - Data structures containing security information for securable objects
   - Components include:
     - Owner [[_content/dictionary#S|SID]]
-    - Primary Group [[_content/dictionary#S|SID]]
+    - Primary Group SID
     - Discretionary Access Control List ([[_content/dictionary#D|DACL]])
     - System Access Control List ([[_content/dictionary#S|SACL]])
 
-- **Access Control Lists ([[_content/dictionary#A|ACL]]s)**
+- **Access Control Lists (ACLs)**
   - **[[_content/dictionary#D|DACL]]** (Discretionary Access Control List)
     - Defines which security principals are granted or denied access
-    - Contains Access Control Entries ([[_content/dictionary#A|ACE]]s) in priority order
-    - If no [[_content/dictionary#D|DACL]] is present, full access is granted to everyone
-    - If [[_content/dictionary#D|DACL]] is empty, all access is denied
+    - Contains Access Control Entries (ACEs) in priority order
+    - If no DACL is present, full access is granted to everyone
+    - If DACL is empty, all access is denied
 
   - **[[_content/dictionary#S|SACL]]** (System Access Control List)
     - Controls auditing of access attempts

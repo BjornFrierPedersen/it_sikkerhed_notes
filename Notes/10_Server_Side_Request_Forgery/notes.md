@@ -6,11 +6,11 @@ Server-Side Request Forgery ([[_content/dictionary#S|SSRF]]) is a vulnerability 
 [[_content/dictionary#S|SSRF]] is a new addition to the [[_content/dictionary#O|OWASP]] Top 10 for 2021, primarily due to the rise in cloud services and the increasing complexity of architectures. Modern web applications often fetch remote resources, making [[_content/dictionary#S|SSRF]] a common and potentially severe vulnerability. This category ranked #1 in the Top 10 community survey, indicating very high concern among security professionals.
 
 ## Common Vulnerabilities
-1. Applications that fetch remote resources without validating user-supplied [[_content/dictionary#U|URL]]s
+1. Applications that fetch remote resources without validating user-supplied URLs
 2. Applications that allow [[_content/dictionary#U|URL]] redirection to arbitrary destinations
-3. Applications that don't enforce [[_content/dictionary#U|URL]] schemas, allowing attackers to use schemes like file://, dict://, [[_content/dictionary#F|FTP]]://, and gopher://
+3. Applications that don't enforce URL schemas, allowing attackers to use schemes like file://, dict://, [[_content/dictionary#F|FTP]]://, and gopher://
 4. Applications that don't validate or incorrectly validate the destination [[_content/dictionary#I|IP]] address against blocklists or allowlists
-5. Applications that forward the complete [[_content/dictionary#U|URL]] without attempting to parse it and check the destination
+5. Applications that forward the complete URL without attempting to parse it and check the destination
 
 ## Prevention
 1. Implement defense in depth controls:

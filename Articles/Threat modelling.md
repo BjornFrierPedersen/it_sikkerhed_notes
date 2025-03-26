@@ -1,5 +1,7 @@
 Source:
 - https://owasp.org/www-community/Threat_Modeling_Process
+- https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html
+- https://github.com/[[_content/dictionary#O|OWASP]]/threat-dragon
 
 ## Introduction
 - Purpose: Structured approach to identify, quantify, and address security risks in applications.
@@ -17,6 +19,17 @@ Source:
 - Use methodologies like [[_content/dictionary#S|STRIDE]].
 - Identify threats using threat trees and common threat lists.
 
+#### [[_content/dictionary#S|STRIDE]] Threat Categories
+
+| Threat Category         | Violates          | Examples                                                                                                    |
+| ----------------------- | ----------------- | ----------------------------------------------------------------------------------------------------------- |
+| Spoofing                | Authenticity      | An attacker steals the authentication token of a legitimate user and uses it to impersonate the user.       |
+| Tampering               | Integrity         | An attacker abuses the application to perform unintended updates to a database.                             |
+| Repudiation             | Non-repudiability | An attacker manipulates logs to cover their actions.                                                        |
+| Information Disclosure  | Confidentiality   | An attacker extract data from a database containing user account info.                                      |
+| Denial of Service       | Availability      | An attacker locks a legitimate user out of their account by performing many failed authentication attempts. |
+| Elevation of Privileges | Authorization     | An attacker tampers with a JWT to change their role.                                                        |
+
 ### Determine Countermeasures and Mitigation:
 
 - Map threats to countermeasures.
@@ -33,6 +46,8 @@ Source:
 - Example Diagrams and Threat Lists: Provide practical illustrations and common threats.
 
 This page emphasizes the importance of integrating threat modeling into the Software Development Life Cycle ([[_content/dictionary#S|SDLC]]) to enhance application security.
+
+A big part of threat modelling is Data Flow Diagrams ([[_content/dictionary#D|DFD]]) which are used to gain an understanding of the system we are trying to protect. Without understanding the system, we cannot possibly fathom the attack vectors that might be present. This is why we start of by creating DFD's.
 
 ## Comprehensive Threat Model Example
 
@@ -65,17 +80,17 @@ Entry points are interfaces through which attackers can interact with the applic
 
 #### Entry Points
 
-| ID | Name | Description | Trust Levels |
-|---|---|---|---|
-| 1 | HTTPS Port | TLS-secured access point for all pages | (1) Anonymous User<br>(2) Valid Credentials<br>(3) Invalid Credentials<br>(4) Librarian |
-| 1.1 | Library Main Page | Initial landing page | (1) Anonymous User<br>(2) Valid Credentials<br>(3) Invalid Credentials<br>(4) Librarian |
-| 1.2 | Login Page | Authentication portal | (1) Anonymous User<br>(2) Valid Credentials<br>(3) Invalid Credentials<br>(4) Librarian |
-| 1.2.1 | Login Function | Credential validation | (2) Valid Credentials<br>(3) Invalid Credentials<br>(4) Librarian |
-| 1.3 | Search Entry Page | Search functionality | (2) Valid Credentials<br>(4) Librarian |
+| ID    | Name                    | Description           | Trust Levels                                                                            |                                          |                                                                                         |
+| ----- | ----------------------- | --------------------- | --------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------- |
+| 1     | HTTPS Port          | TLS-secured access point for all pages | (1) Anonymous User<br>(2) Valid Credentials<br>(3) Invalid Credentials<br>(4) Librarian |
+| 1.1   | Library Main Page       | Initial landing page  | (1) Anonymous User<br>(2) Valid Credentials<br>(3) Invalid Credentials<br>(4) Librarian |                                          |                                                                                         |
+| 1.2   | Login Page              | Authentication portal | (1) Anonymous User<br>(2) Valid Credentials<br>(3) Invalid Credentials<br>(4) Librarian |                                          |                                                                                         |
+| 1.2.1 | Login Function          | Credential validation | (2) Valid Credentials<br>(3) Invalid Credentials<br>(4) Librarian                       |                                          |                                                                                         |
+| 1.3   | Search Entry Page       | Search functionality  | (2) Valid Credentials<br>(4) Librarian                                                  |                                          |                                                                                         |
 
 ### Exit Points
 
-Exit points are where data leaves the system and can be targeted in attacks like XSS and information disclosure. Exit points without proper security controls may leak confidential information. Error messages at exit points can enable attacks like account harvesting or SQL injection.
+Exit points are where data leaves the system and can be targeted in attacks like [[_content/dictionary#X|XSS]] and information disclosure. Exit points without proper security controls may leak confidential information. Error messages at exit points can enable attacks like account harvesting or [[_content/dictionary#S|SQL]] injection.
 
 ### Assets
 

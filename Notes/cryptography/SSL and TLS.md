@@ -11,13 +11,13 @@
 - **Status**: Deprecated in 2011 ([[_content/dictionary#R|RFC]] 6176)
 - **Security**: Fundamentally insecure, multiple vulnerabilities
 
-### SSL 3.0 (1996)
+### [[_content/dictionary#S|SSL]] 3.0 (1996)
 - Significant redesign of [[_content/dictionary#S|SSL]] 2.0
 - Still developed by Netscape
 - **Status**: Deprecated in 2015 ([[_content/dictionary#R|RFC]] 7568)
 - **Security**: Vulnerable to [[_content/dictionary#P|POODLE]] attack
 
-### TLS 1.0 (1999)
+### [[_content/dictionary#T|TLS]] 1.0 (1999)
 - First version of [[_content/dictionary#T|TLS]], based on [[_content/dictionary#S|SSL]] 3.0
 - Defined in [[_content/dictionary#R|RFC]] 2246
 - **Status**: Deprecated in 2020

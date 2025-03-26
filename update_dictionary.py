@@ -17,6 +17,8 @@ import argparse
 # Configuration
 DICTIONARY_FILE = '_content/dictionary.md'
 SOURCE_DIRS = ['Articles', 'Notes']
+# Terms to exclude from dictionary and processing
+EXCLUDED_TERMS = ["ID"]
 # Regex patterns for identifying potential terms
 ALL_CAPS_PATTERN = r'\b[A-Z]{2,}(?:/[A-Z]{2,})?\b'  # Match ALL CAPS terms like "TLS" or "TLS/SSL"
 CAMEL_CASE_PATTERN = r'\b[A-Z][a-z]+(?:[A-Z][a-z]+)+\b'  # Match CamelCase like "ElGamal"
@@ -41,6 +43,51 @@ def load_dictionary():
     
     return dictionary_terms
 
+def is_in_table(text, position):
+    """
+    Determine if a given position in text is within a Markdown table.
+    Returns True if position is inside a table, False otherwise.
+    """
+    # Find the start of the paragraph containing this position
+    paragraph_start = text.rfind('\n\n', 0, position) + 2
+    if paragraph_start < 2:  # Handle case where there's no preceding double newline
+        paragraph_start = 0
+    
+    # Find the end of the paragraph containing this position
+    paragraph_end = text.find('\n\n', position)
+    if paragraph_end == -1:  # Handle case where there's no following double newline
+        paragraph_end = len(text)
+    
+    paragraph = text[paragraph_start:paragraph_end]
+    
+    # Check if paragraph contains table markers (pipes)
+    lines = paragraph.split('\n')
+    
+    # If the paragraph doesn't have enough lines, it's probably not a table
+    if len(lines) < 2:
+        return False
+    
+    # Check if majority of lines start and end with a pipe
+    pipe_lines = 0
+    for line in lines:
+        # Skip empty lines
+        if not line.strip():
+            continue
+        # Count lines with pipe characters
+        if '|' in line:
+            pipe_lines += 1
+    
+    # If more than half the lines contain pipes, it's likely a table
+    if pipe_lines > len(lines) / 2:
+        return True
+    
+    # Alternative method: check if there's a separator row (---|---|---)
+    for line in lines:
+        if re.match(r'^\s*\|[-:\s|]+\|\s*$', line):
+            return True
+    
+    return False
+
 def scan_for_terms(file_path, dictionary_terms):
     """
     Scan a markdown file for potential new terms and update existing terms with links.
@@ -56,9 +103,13 @@ def scan_for_terms(file_path, dictionary_terms):
     all_caps_matches = re.finditer(ALL_CAPS_PATTERN, content)
     for match in all_caps_matches:
         term = match.group(0)
+        # Skip excluded terms
+        if term in EXCLUDED_TERMS:
+            continue
+            
         if '/' in term:  # Handle compound terms like "TLS/SSL"
             for subterm in term.split('/'):
-                if subterm not in dictionary_terms:
+                if subterm not in dictionary_terms and subterm not in EXCLUDED_TERMS:
                     new_terms.add(subterm)
         elif term not in dictionary_terms:
             new_terms.add(term)
@@ -67,12 +118,16 @@ def scan_for_terms(file_path, dictionary_terms):
     camel_case_matches = re.finditer(CAMEL_CASE_PATTERN, content)
     for match in camel_case_matches:
         term = match.group(0)
-        if term not in dictionary_terms:
+        if term not in dictionary_terms and term not in EXCLUDED_TERMS:
             new_terms.add(term)
     
     # Update content with dictionary links
     updated_content = content
     for term in dictionary_terms:
+        # Skip excluded terms
+        if term in EXCLUDED_TERMS:
+            continue
+            
         # Skip terms that are too short (likely false positives)
         if len(term) <= 1:
             continue
@@ -87,6 +142,13 @@ def scan_for_terms(file_path, dictionary_terms):
         for i, paragraph in enumerate(paragraphs):
             # Skip if already contains the link for this term
             if f"[[_content/dictionary#{section}|{term}]]" in paragraph:
+                continue
+            
+            # Skip tables
+            if '|' in paragraph and '\n' in paragraph and (
+                re.search(r'^\s*\|', paragraph, re.MULTILINE) or 
+                re.search(r'\|\s*$', paragraph, re.MULTILINE) or
+                re.search(r'[-:]+\s*\|\s*[-:]+', paragraph)):
                 continue
             
             # Replace first occurrence only in this paragraph
@@ -114,6 +176,13 @@ def scan_for_terms(file_path, dictionary_terms):
     compound_pattern = r'\b([A-Z]{2,})/([A-Z]{2,})\b'
     paragraphs = re.split(r'\n\s*\n', updated_content)
     for i, paragraph in enumerate(paragraphs):
+        # Skip tables
+        if '|' in paragraph and '\n' in paragraph and (
+            re.search(r'^\s*\|', paragraph, re.MULTILINE) or 
+            re.search(r'\|\s*$', paragraph, re.MULTILINE) or
+            re.search(r'[-:]+\s*\|\s*[-:]+', paragraph)):
+            continue
+            
         # Find compound terms
         compound_matches = re.finditer(compound_pattern, paragraph)
         for match in compound_matches:

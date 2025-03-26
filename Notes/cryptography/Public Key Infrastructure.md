@@ -50,7 +50,7 @@ As shown in the image above:
 ### Certificate Revocation List ([[_content/dictionary#C|CRL]])
 - List of certificates that have been revoked before their expiration date
 - Reasons for revocation: key compromise, [[_content/dictionary#C|CA]] compromise, change of affiliation, certificate replacement
-- Published regularly by [[_content/dictionary#C|CA]]s
+- Published regularly by CAs
 
 ### Online Certificate Status Protocol ([[_content/dictionary#O|OCSP]])
 - Real-time certificate validation protocol

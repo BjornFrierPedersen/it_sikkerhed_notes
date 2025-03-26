@@ -113,13 +113,13 @@ graph [[_content/dictionary#T|TD]]
 
 | Hash Function | Output Size | Speed | Security Status | Best Use Cases |
 |---------------|-------------|-------|----------------|----------------|
-| [[_content/dictionary#M|MD5]]           | 128 bits    | Very Fast | Broken | Non-security checksums |
-| [[_content/dictionary#S|SHA]]-1         | 160 bits    | Fast | Vulnerable | Legacy systems only |
+| MD5           | 128 bits    | Very Fast | Broken | Non-security checksums |
+| SHA-1         | 160 bits    | Fast | Vulnerable | Legacy systems only |
 | SHA-256       | 256 bits    | Moderate | Secure | General cryptographic use |
 | SHA-3         | Variable    | Moderate | Very Secure | High-security applications |
-| [[_content/dictionary#B|BLAKE2]]        | Variable    | Very Fast | Secure | Performance-critical applications |
-| [[_content/dictionary#B|bcrypt]]        | 184 bits    | Deliberately slow | Secure | Password storage |
-| [[_content/dictionary#A|Argon2]]        | Variable    | Deliberately slow | Very Secure | Password storage, modern applications |
+| BLAKE2        | Variable    | Very Fast | Secure | Performance-critical applications |
+| bcrypt        | 184 bits    | Deliberately slow | Secure | Password storage |
+| Argon2        | Variable    | Deliberately slow | Very Secure | Password storage, modern applications |
 
 ## Code Example: [[_content/dictionary#S|SHA]]-256 Hash
 ```python

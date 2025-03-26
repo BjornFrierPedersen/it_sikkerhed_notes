@@ -31,8 +31,8 @@
    - Covers token creation, validation, and security considerations
 
 8. [[[_content/dictionary#S|SAML]] Security Cheat Sheet](../../[[_content/dictionary#O|OWASP]]%20Cheatsheet/cheatsheets/SAML_Security_Cheat_Sheet.html)
-   - Guidance on securing [[_content/dictionary#S|SAML]] implementations
-   - Covers [[_content/dictionary#S|SAML]]-based authentication and [[_content/dictionary#S|SSO]]
+   - Guidance on securing SAML implementations
+   - Covers SAML-based authentication and [[_content/dictionary#S|SSO]]
 
 9. [Choosing and Using Security Questions Cheat Sheet](../../[[_content/dictionary#O|OWASP]]%20Cheatsheet/cheatsheets/Choosing_and_Using_Security_Questions_Cheat_Sheet.html)
    - Guidance on implementing security questions

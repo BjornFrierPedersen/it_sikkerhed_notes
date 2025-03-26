@@ -20,14 +20,14 @@ An Initialization Vector ([[_content/dictionary#I|IV]]) is like the starting poi
 ### [[_content/dictionary#I|IV]] Requirements by Mode
 Different encryption modes have different requirements for their IVs:
 
-| Mode | [[_content/dictionary#I|IV]]/Nonce Size | Requirements | Consequences of Misuse |
+| Mode | IV/Nonce Size | Requirements | Consequences of Misuse |
 |------|---------------|--------------|------------------------|
-| [[_content/dictionary#C|CBC]]  | Block size    | Random, unpredictable | Predictable IVs enable chosen-plaintext attacks |
-| [[_content/dictionary#C|CFB]]  | Block size    | Random | IV reuse reveals relationships between messages |
-| [[_content/dictionary#O|OFB]]  | Block size    | Random, never reuse | IV reuse completely breaks security |
-| [[_content/dictionary#C|CTR]]  | Usually half block size | Unique per message | Nonce reuse completely breaks security |
-| [[_content/dictionary#G|GCM]]  | Usually 12 bytes | Unique per message | Nonce reuse catastrophically breaks both confidentiality and authentication |
-| [[_content/dictionary#C|CCM]]  | Usually 7-13 bytes | Unique per message | Nonce reuse breaks security |
+| CBC  | Block size    | Random, unpredictable | Predictable IVs enable chosen-plaintext attacks |
+| CFB  | Block size    | Random | IV reuse reveals relationships between messages |
+| OFB  | Block size    | Random, never reuse | IV reuse completely breaks security |
+| CTR  | Usually half block size | Unique per message | Nonce reuse completely breaks security |
+| GCM  | Usually 12 bytes | Unique per message | Nonce reuse catastrophically breaks both confidentiality and authentication |
+| CCM  | Usually 7-13 bytes | Unique per message | Nonce reuse breaks security |
 
 ## [[_content/dictionary#I|IV]] Security Properties
 

@@ -19,7 +19,7 @@ This category, previously known as "Broken Authentication," shifted from the sec
 3. Enforce strong password checks using recent [[_content/dictionary#N|NIST]] 800-63b guidelines.
 4. Ensure registration, credential recovery, and [[_content/dictionary#A|API]] pathways are hardened against account enumeration attacks.
 5. Limit or increasingly delay failed login attempts, and log all failures with alert mechanisms when credential stuffing is detected.
-6. Use a secure server-side session manager that generates a new random session [[_content/dictionary#I|ID]] with high entropy after login.
+6. Use a secure server-side session manager that generates a new random session ID with high entropy after login.
 7. Session IDs should not be included in the [[_content/dictionary#U|URL]], be securely stored, and invalidated after logout, idle, and absolute timeouts.
 
 ## Impact

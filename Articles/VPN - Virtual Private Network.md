@@ -29,11 +29,11 @@ A strong understanding of VPN protocols is essential:
 
 | Protocol      | Encryption | Pros | Cons |
 |--------------|------------|------|------|
-| **IPSec** (IKEv2/IPSec, L2TP/IPSec) | [[_content/dictionary#A|AES]]-256, [[_content/dictionary#S|SHA]]-2, [[_content/dictionary#D|DH]] Groups | Secure, widely used, good for site-to-site VPNs | Can be complex to configure, potential firewall issues |
-| **OpenVPN** | AES-256-[[_content/dictionary#G|GCM]], [[_content/dictionary#T|TLS]] 1.3 | Open-source, flexible, strong security | Requires client software, slightly slower than [[_content/dictionary#W|WireGuard]] |
-| **WireGuard** | [[_content/dictionary#C|ChaCha20]]-[[_content/dictionary#P|Poly1305]] | Fast, efficient, modern design | Newer, limited built-in authentication |
-| **[[_content/dictionary#S|SSL]]/TLS VPNs** | AES-256-GCM, TLS 1.3 | Easy browser-based access, good for remote access VPNs | Can be blocked by [[_content/dictionary#D|DPI]] (Deep Packet Inspection) |
-| **[[_content/dictionary#M|MPLS]] [[_content/dictionary#V|VPN]]** | Provider-managed security | Reliable for enterprise networks | Expensive, requires [[_content/dictionary#I|ISP]] involvement |
+| **IPSec** (IKEv2/IPSec, L2TP/IPSec) | AES-256, SHA-2, DH Groups | Secure, widely used, good for site-to-site VPNs | Can be complex to configure, potential firewall issues |
+| **OpenVPN** | AES-256-GCM, TLS 1.3 | Open-source, flexible, strong security | Requires client software, slightly slower than WireGuard |
+| **WireGuard** | ChaCha20-Poly1305 | Fast, efficient, modern design | Newer, limited built-in authentication |
+| **SSL/TLS VPNs** | AES-256-GCM, TLS 1.3 | Easy browser-based access, good for remote access VPNs | Can be blocked by DPI (Deep Packet Inspection) |
+| **MPLS VPN** | Provider-managed security | Reliable for enterprise networks | Expensive, requires ISP involvement |
 
 ---
 

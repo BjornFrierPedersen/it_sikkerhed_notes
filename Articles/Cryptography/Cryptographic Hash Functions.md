@@ -19,10 +19,10 @@ Source: https://en.wikipedia.org/wiki/Cryptographic_hash_function
 ## Cryptographic Hash Algorithms
 - [[_content/dictionary#M|MD5]]: Produces a 128-bit digest, but is considered broken.
 - [[_content/dictionary#S|SHA]]-1: Produces a 160-bit digest, but is also considered broken.
-- [[_content/dictionary#S|SHA]]-2: Includes [[_content/dictionary#S|SHA]]-256 and [[_content/dictionary#S|SHA]]-512, widely used and secure.
+- [[_content/dictionary#S|SHA]]-2: Includes SHA-256 and SHA-512, widely used and secure.
 - [[_content/dictionary#S|SHA]]-3: Released in 2015, based on the [[_content/dictionary#K|Keccak]] algorithm.
 - [[_content/dictionary#B|BLAKE2]]: An improved version of [[_content/dictionary#B|BLAKE]], faster than [[_content/dictionary#S|SHA]]-3.
 
 ## Attacks on Cryptographic Hash Algorithms
-- Length-extension attacks: Vulnerable hash functions include [[_content/dictionary#M|MD5]], [[_content/dictionary#S|SHA]]-1, and [[_content/dictionary#S|SHA]]-256.
+- Length-extension attacks: Vulnerable hash functions include [[_content/dictionary#M|MD5]], [[_content/dictionary#S|SHA]]-1, and SHA-256.
 - Attacks on hashed passwords: Brute-force attacks can be mitigated using key derivation functions like [[_content/dictionary#P|PBKDF2]], [[_content/dictionary#B|bcrypt]], and [[_content/dictionary#S|scrypt]].

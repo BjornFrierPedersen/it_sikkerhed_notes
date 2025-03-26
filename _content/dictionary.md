@@ -87,6 +87,7 @@ This dictionary contains explanations of common abbreviations found in the cyber
 - **ChaCha20**: A symmetric stream cipher that uses a 256-bit key and is designed for high performance in software implementations.
 
 ## D
+- **DFD**: Data Flow Diagram - A graphical representation that depicts how data moves through an information system, showing processes, data stores, external entities, and the flow of information between them. Used extensively in threat modeling to identify trust boundaries and potential attack surfaces.
 - **DELETE**: An HTTP method used to remove resources, which requires proper access controls to prevent unauthorized deletion.
 - **DER**: Distinguished Encoding Rules - A binary encoding format for ASN.1 data structures, commonly used in certificates.
 - **DLP**: Data Loss Prevention - Technologies that detect and prevent data breaches, exfiltration, or unwanted destruction of data.
@@ -168,7 +169,6 @@ This dictionary contains explanations of common abbreviations found in the cyber
 - **Heartbleed**: A critical vulnerability in the OpenSSL cryptographic software library that allows stealing information protected by SSL/TLS encryption.
 
 ## I
-- **ID**: Identifier - A unique value used to identify a user, process, or resource in security systems.
 - **IEC**: International Electrotechnical Commission - An organization that publishes international standards for electrical, electronic, and related technologies, including IT security.
 - **IEEE**: Institute of Electrical and Electronics Engineers - An organization that develops standards for telecommunications and networking security.
 - **IETF**: Internet Engineering Task Force - Develops and promotes Internet standards, including security protocols.

@@ -35,9 +35,9 @@ Wi-Fi standards ([[_content/dictionary#I|IEEE]] 802.11) define wireless communic
 | **802.11b** | 2.4 GHz | 11 Mbps | ~100m | Obsolete, slow, high interference |
 | **802.11a** | 5 GHz | 54 Mbps | ~50m | Obsolete, limited adoption |
 | **802.11g** | 2.4 GHz | 54 Mbps | ~100m | Better than 802.11b but outdated |
-| **802.11n (Wi-Fi 4)** | 2.4 & 5 GHz | 600 Mbps | ~150m | Introduced [[_content/dictionary#M|MIMO]], still in use |
-| **802.11ac (Wi-Fi 5)** | 5 GHz | 3.5 Gbps | ~100m | Uses wider channels, [[_content/dictionary#M|MU]]-MIMO |
-| **802.11ax (Wi-Fi 6/6E)** | 2.4, 5, 6 GHz | 9.6 Gbps | ~150m | [[_content/dictionary#O|OFDMA]], better efficiency |
+| **802.11n (Wi-Fi 4)** | 2.4 & 5 GHz | 600 Mbps | ~150m | Introduced MIMO, still in use |
+| **802.11ac (Wi-Fi 5)** | 5 GHz | 3.5 Gbps | ~100m | Uses wider channels, MU-MIMO |
+| **802.11ax (Wi-Fi 6/6E)** | 2.4, 5, 6 GHz | 9.6 Gbps | ~150m | OFDMA, better efficiency |
 | **802.11be (Wi-Fi 7, upcoming)** | 2.4, 5, 6 GHz | 40 Gbps | ~150m | Higher efficiency, lower latency |
 
 ### **Frequency Bands**
@@ -52,12 +52,12 @@ Encryption is essential to protect wireless traffic. Different security protocol
 
 | **Security Protocol** | **Encryption** | **Status** | **Vulnerabilities** |
 |----------------------|--------------|------------|---------------------|
-| **[[_content/dictionary#W|WEP]] (Wired Equivalent Privacy)** | [[_content/dictionary#R|RC4]] (weak) | Obsolete | Easily cracked in seconds |
-| **[[_content/dictionary#W|WPA]] (Wi-Fi Protected Access)** | [[_content/dictionary#T|TKIP]] (weak) | Obsolete | Susceptible to attacks |
-| **WPA2-[[_content/dictionary#P|PSK]]** | [[_content/dictionary#A|AES]]-[[_content/dictionary#C|CCMP]] | Still used | Vulnerable to brute-force attacks |
-| **WPA2-Enterprise** | AES-CCMP | Secure | Requires [[_content/dictionary#R|RADIUS]] server |
-| **WPA3-PSK** | AES-[[_content/dictionary#G|GCMP]] | Secure | Resistant to offline dictionary attacks |
-| **WPA3-Enterprise** | AES-GCMP | Most Secure | Protected Management Frames ([[_content/dictionary#P|PMF]]) |
+| **WEP (Wired Equivalent Privacy)** | RC4 (weak) | Obsolete | Easily cracked in seconds |
+| **WPA (Wi-Fi Protected Access)** | TKIP (weak) | Obsolete | Susceptible to attacks |
+| **WPA2-PSK** | AES-CCMP | Still used | Vulnerable to brute-force attacks |
+| **WPA2-Enterprise** | AES-CCMP | Secure | Requires RADIUS server |
+| **WPA3-PSK** | AES-GCMP | Secure | Resistant to offline dictionary attacks |
+| **WPA3-Enterprise** | AES-GCMP | Most Secure | Protected Management Frames (PMF) |
 
 ### **Security Best Practices**
 - **Use WPA3 when possible** (or WPA2 with [[_content/dictionary#A|AES]] if WPA3 is not supported).

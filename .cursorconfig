@@ -64,6 +64,30 @@
           "existing_link_preserved": "The [[_content/dictionary#C|CSRF]] attack bypassed the security controls."
         }
       }
+    },
+    "what_do_we_know_about": {
+      "description": "Search for comprehensive information about a cybersecurity term or concept across the vault",
+      "mode": "assistant",
+      "action": {
+        "type": "assistant",
+        "instructions": "When a user asks 'What do we know about X?' or similar queries, follow these steps:\n1. First check the _content/dictionary.md file for the formal definition of the term\n2. Then perform a semantic search across all notes, articles, and resources for relevant information about the topic\n3. Combine the dictionary definition with the contextual information from other files\n4. Present a comprehensive answer that includes both the formal definition and practical information found in the vault\n5. Organize the response with clear sections and highlights key points\n6. Include references to source files where the information was found"
+      },
+      "details": {
+        "process": [
+          "Parse the query to identify the key term or concept being asked about",
+          "Check the dictionary (_content/dictionary.md) for formal definitions",
+          "Use codebase_search to find relevant information across all files",
+          "Read referenced files to extract detailed information",
+          "Synthesize all findings into a comprehensive response",
+          "Ensure all terms in the response are properly linked to the dictionary where appropriate"
+        ],
+        "examples": {
+          "query_1": "What do we know about CIA?",
+          "expected_response_1": "A comprehensive answer that first provides the dictionary definition of CIA (Confidentiality, Integrity, Availability) and then includes relevant information found in notes about how CIA is applied in various security contexts.",
+          "query_2": "What do we know about SSL?",
+          "expected_response_2": "A thorough explanation of SSL that includes its dictionary definition and additional information from protocol documentation, notes on vulnerabilities, and practical implementation details found throughout the vault."
+        }
+      }
     }
   }
 } 
