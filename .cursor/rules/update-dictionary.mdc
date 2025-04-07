@@ -1,0 +1,51 @@
+---
+description: Scan through all markdown files to find abbreviations, update the dictionary, add links in files, and provide definitions for missing terms
+globs: **/*.md
+---
+## Command Execution
+- **Type**: Shell command
+- **Command**: `python update_dictionary.py`
+- **Working Directory**: Workspace root
+- **Post-Action**: Runs assistant with prompt to provide definitions for terms marked `[NEEDS DEFINITION]`
+
+## Process Details
+1. Read the current `_content/dictionary.md` file to identify existing abbreviations
+2. Scan markdown (.md) files in Articles/, Notes/, and other relevant directories
+3. Identify potential abbreviations (all-caps terms, technical terminology)
+4. Compare against existing dictionary entries
+5. Add new abbreviations to dictionary in alphabetical order with explanations
+6. For EACH identified abbreviation in the source files, replace ALL instances with its linked form
+7. Use the format `[[_content/dictionary#X|TERM]]` where X is the first letter of the term
+8. Ensure the linking is done for both new and existing abbreviations
+9. Handle special cases where a term appears mid-sentence or with different capitalization
+10. Avoid modifying terms already properly linked to the dictionary
+11. After script execution, the assistant will automatically provide detailed definitions for terms marked as `[NEEDS DEFINITION]`
+
+## Environment
+- **OS**: Windows
+- **Shell**: PowerShell
+- **Path**: C:\Users\bjofr\OneDrive - IST\Dokument\Obsidian Vault\it_sikkerhed
+- **Dictionary Path**: `_content/dictionary.md`
+
+## Limitations
+- Some PowerShell commands may have output formatting issues
+- Directory traversal should be done using list_dir tool instead of PowerShell find/grep
+- Process large files in sections to avoid memory issues
+- Be careful not to create duplicate links when terms already have proper dictionary links
+
+## Examples
+
+### Original Text
+```
+The CSRF attack bypassed the security controls.
+```
+
+### With Dictionary Link
+```
+The [[_content/dictionary#C|CSRF]] attack bypassed the security controls.
+```
+
+### Example with Preserved Link
+```
+The [[_content/dictionary#C|CSRF]] attack bypassed the security controls.
+``` 

@@ -1,0 +1,42 @@
+---
+description: Always browse the file _THE_NOTE_ for new content that should be moved to its appropriate location
+globs: 
+---
+## When This Rule Applies
+- **Path Pattern**: `**/*.md`
+- **Match Pattern**: When a user writes "update the note"
+
+## Instructions
+
+**IMPORTANT**: When this rule is triggered, you MUST start your response by stating: "I'm checking the contents of _THE_NOTE_ and moving the content into the appropriate folders/files. This acknowledgment is required before proceeding with any research or response.
+
+When a user types 'update the note', follow these steps:
+
+1. First check the _THE_NOTE_.md file for new content
+2. Extract keywords and information about the subject the notes are describing
+3. Then perform a semantic search across all notes, articles, and resources for relevant information about the topic
+3. Combine the dictionary definition with the contextual information from other files
+4. Move the information from the _THE_NOTE_.md file into the appropriate location whether it's into an existing file, new files in an axisting location or a new file in a new directory.
+5. Present the user with a structured view of the files and locations creates and/or updated
+
+## Process
+
+- Parse the query to identify the key term or concept being asked about
+- Group the content of the file _THE_NOTE_ into appropriate subject groupings
+- Foreach grouping do the following
+    - Check the dictionary (_content/dictionary.md) for formal definitions
+    - Use codebase_search to find relevant information across all files
+    - Read referenced files to extract detailed information
+    - Update or create files and move the information
+- Synthesize all findings into a comprehensive response
+- Delete the moved content from the file _THE_NOTE_.md by:
+    - First reading the current content of _THE_NOTE_.md
+    - Using edit_file to replace all content with an empty string
+    - Verifying deletion was successful by reading the file again
+
+## Example:
+
+**Query**: "Update the note"
+
+**Expected Response**:  
+A comprehensive answer that first provides the subject of the information groupings in the _THE_NOTE_.md file and where the information has been relocated to.

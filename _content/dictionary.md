@@ -3,6 +3,11 @@
 This dictionary contains explanations of common abbreviations found in the cybersecurity field, organized alphabetically.
 
 ## A
+- **ABAC**: Attribute-Based Access Control - A flexible access control model where authorization decisions are made based on attributes associated with users, resources, actions, and environment rather than just roles. Allows for fine-grained access control using policies that evaluate these attributes.
+- **AccountController**: A controller class in ASP.NET MVC applications that typically handles user account management functionalities such as login, registration, password management, and user profile operations.
+- **ActionResult**: In ASP.NET MVC, a return type for controller action methods that represents the result of an action method and determines how the response is sent to the client. Examples include ViewResult, JsonResult, and RedirectResult.
+- **AdminFunctionality**: A commonly used term for a controller action or feature that provides administrative capabilities in an application, often requiring elevated privileges and robust access control.
+- **AllowAnonymous**: An attribute in ASP.NET used to specify that authorization is not required for a controller or action method, allowing unauthenticated access even when authorization is enabled application-wide.
 - **AAD**: Additional Authenticated Data - Data that is authenticated but not encrypted in authenticated encryption schemes like AES-GCM.
 - **ACK**: Acknowledgment - A signal passed between communicating processes or computers to signify receipt of a message.
 - **AESGCM**: Advanced Encryption Standard Galois/Counter Mode - A widely used authenticated encryption algorithm combining AES encryption with the GCM mode.
@@ -217,6 +222,7 @@ This dictionary contains explanations of common abbreviations found in the cyber
 - **Logjam**: A security vulnerability against systems using the Diffie-Hellman key exchange protocol with weak parameters.
 
 ## M
+- **MVC**: Model-View-Controller - A software architectural pattern that separates an application into three main components: Model (data), View (user interface), and Controller (business logic). Commonly used in web applications to promote code organization and security through separation of concerns.
 - **MAID**: Massive Array of Idle Disks - A storage technology with security implications for data at rest.
 - **MIME**: Multipurpose Internet Mail Extensions - A standard for formatting non-ASCII messages, relevant for email security.
 - **MIMO**: Multiple-Input Multiple-Output - A method for multiplying radio transmission capacity, used in secure wireless communications.
@@ -265,6 +271,7 @@ This dictionary contains explanations of common abbreviations found in the cyber
 - **OWASP**: Open Web Application Security Project - A nonprofit foundation dedicated to improving software security.
 
 ## P
+- **PublicFunctionality**: A term commonly used for a controller action or feature in a web application that is intended to be accessible to all users without requiring authentication or specific authorization.
 - **PCI**: Payment Card Industry - Organizations responsible for securing credit card transactions, or Peripheral Component Interconnect data buses.
 - **PDF**: Portable Document Format - A file format that can contain malicious code and requires security scanning.
 - **PEM**: Privacy Enhanced Mail - A base64 encoded format for storing and sending cryptographic keys and certificates.
@@ -351,6 +358,7 @@ This dictionary contains explanations of common abbreviations found in the cyber
 - **Sponge construction**: A cryptographic function used in SHA-3 and other algorithms, which can absorb arbitrary amounts of data and produce outputs of any desired length.
 
 ## T
+- **ThreatModelExampleTable**: A visual reference guide that illustrates a structured approach to threat modeling, showing example components, data flows, and security considerations in tabular format. Used to help identify and document potential security threats, vulnerabilities, and mitigations in system design.
 - **TAG**: A type of metadata attached to information for classification or identification in security systems.
 - **TCG**: Trusted Computing Group - An organization that develops and promotes open standards for hardware-enabled trusted computing.
 - **TCP**: Transmission Control Protocol - A core protocol of the Internet Protocol Suite used for reliable data transmission.

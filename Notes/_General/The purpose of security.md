@@ -27,9 +27,9 @@
 - Integrity: Prevent unauthorized modification
 - Availability: Ensure that the information is available. (failover, loadbalancer, etc.)
 
-### Different Perspectives on CIA Priorities
+### Different Perspectives on [[_content/dictionary#C|CIA]] Priorities
 
-The importance of each pillar in the CIA triad can vary significantly depending on the perspective of different stakeholders. What's most critical for one group may be less important for another, creating tension in security design.
+The importance of each pillar in the [[_content/dictionary#C|CIA]] triad can vary significantly depending on the perspective of different stakeholders. What's most critical for one group may be less important for another, creating tension in security design.
 
 #### Healthcare Information Systems Example
 
@@ -46,7 +46,7 @@ The importance of each pillar in the CIA triad can vary significantly depending 
 
 **For Healthcare Organizations (Business):**
 - **Priority: Compliance & All Three Balanced**
-- Healthcare organizations must balance all three aspects while complying with regulations like HIPAA.
+- Healthcare organizations must balance all three aspects while complying with regulations like [[_content/dictionary#H|HIPAA]].
 - They face legal and financial penalties for breaches in any of the three areas.
 - Their security frameworks typically try to give equal weight to all three principles.
 
@@ -56,14 +56,14 @@ The importance of each pillar in the CIA triad can vary significantly depending 
 - The integrity of aggregate health data is crucial for research and policy-making.
 - While individual confidentiality matters, societal needs during health emergencies may prioritize the other aspects.
 
-This healthcare example demonstrates how the same system requires different security priorities depending on which stakeholder's perspective you consider. Similar variations in CIA priorities can be observed in financial systems, government services, educational institutions, and critical infrastructure.
+This healthcare example demonstrates how the same system requires different security priorities depending on which stakeholder's perspective you consider. Similar variations in [[_content/dictionary#C|CIA]] priorities can be observed in financial systems, government services, educational institutions, and critical infrastructure.
 
-#### Recommendations for Balancing CIA
+#### Recommendations for Balancing [[_content/dictionary#C|CIA]]
 
 When implementing security measures:
 1. Consider all stakeholder perspectives
 2. Conduct a thorough risk assessment
-3. Recognize that CIA priorities may shift based on context and circumstances
+3. Recognize that [[_content/dictionary#C|CIA]] priorities may shift based on context and circumstances
 4. Document and communicate the security trade-offs to stakeholders
 5. Review and adjust security controls as needs and threats evolve
 

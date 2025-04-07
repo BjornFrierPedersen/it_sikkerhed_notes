@@ -1,0 +1,45 @@
+---
+description: Search for comprehensive information about a cybersecurity term or concept across the vault
+globs: **/*.md
+---
+## When This Rule Applies
+- **Path Pattern**: `**/*.md`
+- **Match Pattern**: When a user asks "What do we know about X?" or uses the shorthand "wdwka X"
+
+## Instructions
+
+**IMPORTANT**: When this rule is triggered, you MUST start your response by stating: "I'm activating the 'What Do We Know About' rule for [term]" and describe briefly how you'll follow the rule's process steps. This acknowledgment is required before proceeding with any research or response.
+
+When a user asks 'What do we know about X?' or similar queries, follow these steps:
+
+1. First check the _content/dictionary.md file for the formal definition of the term
+2. Then perform a semantic search across all notes, articles, and resources for relevant information about the topic
+3. Combine the dictionary definition with the contextual information from other files
+4. Present a comprehensive answer that includes both the formal definition and practical information found in the vault
+5. Organize the response with clear sections and highlights key points
+6. Include references to source files where the information was found
+
+## Process
+
+- Parse the query to identify the key term or concept being asked about
+- Check the dictionary (_content/dictionary.md) for formal definitions
+- Use codebase_search to find relevant information across all files
+- Read referenced files to extract detailed information
+- Synthesize all findings into a comprehensive response
+- Ensure all terms in the response are properly linked to the dictionary where appropriate
+
+## Examples
+
+### Example 1: CIA
+
+**Query**: "What do we know about CIA?"
+
+**Expected Response**:  
+A comprehensive answer that first provides the dictionary definition of CIA (Confidentiality, Integrity, Availability) and then includes relevant information found in notes about how CIA is applied in various security contexts.
+
+### Example 2: SSL
+
+**Query**: "What do we know about SSL?"
+
+**Expected Response**:  
+A thorough explanation of SSL that includes its dictionary definition and additional information from protocol documentation, notes on vulnerabilities, and practical implementation details found throughout the vault. 
