@@ -2,6 +2,8 @@
 description: Always browse the file _THE_NOTE_ for new content that should be moved to its appropriate location
 globs: 
 ---
+Rule Name: the-note.mdc
+Description: Always browse the file _THE_NOTE_ for new content that should be moved to its appropriate location
 ## When This Rule Applies
 - **Path Pattern**: `**/*.md`
 - **Match Pattern**: When a user writes "update the note"
@@ -18,6 +20,11 @@ When a user types 'update the note', follow these steps:
 3. Combine the dictionary definition with the contextual information from other files
 4. Move the information from the _THE_NOTE_.md file into the appropriate location whether it's into an existing file, new files in an axisting location or a new file in a new directory.
 5. Present the user with a structured view of the files and locations creates and/or updated
+6. After completing file operations, automatically update the project index by:
+   - Checking the current project structure using list_dir on key directories
+   - Comparing with what's in _content/project_index.md
+   - Updating the index to reflect new files or directories created
+   - Including a summary of index updates in your response
 
 ## Process
 
@@ -33,10 +40,16 @@ When a user types 'update the note', follow these steps:
     - First reading the current content of _THE_NOTE_.md
     - Using edit_file to replace all content with an empty string
     - Verifying deletion was successful by reading the file again
+- Perform index update by:
+    - Examine key directories: Notes, Articles, OWASP Cheatsheets, _content
+    - Check for any new directories or content created in the current operation
+    - Read the current project_index.md file
+    - Update the index to include new content areas or files just created
+    - Maintain the existing organization and formatting of the index
 
 ## Example:
 
 **Query**: "Update the note"
 
 **Expected Response**:  
-A comprehensive answer that first provides the subject of the information groupings in the _THE_NOTE_.md file and where the information has been relocated to.
+A comprehensive answer that first provides the subject of the information groupings in the _THE_NOTE_.md file and where the information has been relocated to. The response should also include a brief summary of any index updates made to reflect the new files or locations.

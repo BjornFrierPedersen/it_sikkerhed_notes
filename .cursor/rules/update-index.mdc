@@ -1,0 +1,41 @@
+# Update Project Index Rule
+Description: Update the project index whenever new files have been added to the vault
+
+## When This Rule Applies
+- **Path Pattern**: `**/*.md`
+- **Match Pattern**: When a user writes "update the index" or "update project index"
+
+## Instructions
+
+**IMPORTANT**: When this rule is triggered, you MUST start your response by stating: "I'm updating the project index to reflect the current state of the vault." This acknowledgment is required before proceeding with any research or response.
+
+When a user requests to update the index, follow these steps:
+
+1. First check the current project structure using list_dir on key directories
+2. Compare the found structure with what's currently in _content/project_index.md
+3. Identify any new files, directories, or content areas that should be included
+4. Update the project_index.md file to reflect the current state of the vault
+5. Provide a summary of the changes made to the index
+
+## Process
+
+- Explore the project structure using list_dir to catalog all content areas
+  - Start with the root directory
+  - Examine key directories: Notes, Articles, OWASP Cheatsheets, _content
+  - Check for any new directories or patterns of content
+- Read the current project_index.md file
+- Identify differences between the actual project structure and the index
+- Update the index to include:
+  - New content areas
+  - New directories or files that represent important topics
+  - Updated statistics (if applicable)
+  - Any structural changes
+- Maintain the existing organization and formatting of the index
+- Provide a concise summary of what was added or changed in the index
+
+## Example
+
+**Query**: "update the index"
+
+**Expected Response**:  
+"I'm updating the project index to reflect the current state of the vault." Followed by a summary of how the index was updated, what new content areas were added, and confirmation of successful update. 

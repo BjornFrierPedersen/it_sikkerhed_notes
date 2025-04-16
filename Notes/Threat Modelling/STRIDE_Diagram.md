@@ -4,7 +4,7 @@
 
 ```mermaid
 classDiagram
-    class [[_content/dictionary#S|STRIDE]] {
+    class STRIDE {
         A threat modeling framework
         Systematically identifies security threats
         Developed by Microsoft
@@ -80,7 +80,7 @@ classDiagram
         Proper access control enforcement
     }
 
-    [[_content/dictionary#S|STRIDE]] --> Spoofing
+    STRIDE --> Spoofing
     STRIDE --> Tampering
     STRIDE --> Repudiation
     STRIDE --> Information_Disclosure
