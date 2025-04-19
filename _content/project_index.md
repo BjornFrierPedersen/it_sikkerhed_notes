@@ -38,14 +38,14 @@ Located in `/Notes/[number]_[vulnerability name]` folders:
     - SSRF vulnerabilities and prevention
 
 ### 2. Threat Modeling
-Located in both `/Notes/Threat Modelling/` and `/Notes/Thread Modelling/` (naming discrepancy):
+Located in `/Notes/Threat Modelling/`:
 
-- **STRIDE Framework** - Documented in both folders with diagrams
+- **STRIDE Framework** - Documented with diagrams
   - Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, Elevation of Privilege
 - **Threat Modeling Process** - General methodology and approach
 
 ### 3. Cryptography
-Located in `/Notes/cryptography/` and `/Articles/Cryptography/`:
+Located in `/Notes/Articles/Cryptography/`:
 
 - Implementation types
 - Cryptographic concepts 
@@ -53,8 +53,18 @@ Located in `/Notes/cryptography/` and `/Articles/Cryptography/`:
 - Asymmetric encryption
 - Problems cryptography solves
 
-### 4. General Security Concepts
-Located in `/Notes/_General/` and `/Articles/`:
+### 4. Social Engineering & Phishing Attacks
+Located in `/Notes/Social_Engineering_Attacks/`:
+
+- What is social engineering and its various types
+  - Piggybacking, Shoulder surfing, Baiting, Dumpster diving, Tailgating
+- Phishing attack methodologies
+  - Email Phishing, Spear Phishing, Whaling, Smishing, Vishing
+- Phishing kits and tools
+- Prevention and mitigation strategies
+
+### 5. General Security Concepts
+Located in `/Notes/General/` and `/Notes/Articles/`:
 
 - Windows Access Controls
 - Security by Design Principles
@@ -68,7 +78,7 @@ Located in `/Notes/_General/` and `/Articles/`:
 ## Reference Materials
 
 ### 1. OWASP Cheatsheets
-Located in `/OWASP Cheatsheets/`:
+Located in `/Notes/OWASP Cheatsheets/`:
 
 - 90+ security cheatsheets covering various aspects of application security
 - Comprehensive guides on secure implementation of technologies
@@ -79,6 +89,14 @@ Located in `/_content/dictionary.md`:
 
 - Comprehensive glossary of cybersecurity terms and abbreviations
 - Organized alphabetically with explanations
+
+### 3. Standards Documentation
+Located in `/Notes/Standards/`:
+
+- OWASP Application Security Verification Standard (ASVS) overview
+- OWASP Software Assurance Maturity Model (SAMM)
+- Critical Security Controls
+- Example security assessment reports
 
 ## Tools and Utilities
 
@@ -94,19 +112,21 @@ Located in `/_content/dictionary.md`:
 │   ├── dictionary.md           # Cybersecurity terms glossary
 │   └── project_index.md        # This index file
 ├── _THE_NOTE_.md               # Temporary note file for content to be organized
-├── Articles/                   # Full-length articles on security topics
-│   ├── Cryptography/           # Articles on cryptographic topics
-│   ├── Protocols/              # Articles on security protocols
-│   └── [Various standalone articles]
-├── Notes/                      # Study notes and shorter content
+├── Notes/
+│   ├── Articles/               # Articles on various security topics
+│   │   ├── Cryptography/       # Articles on cryptographic topics
+│   │   ├── Protocols/          # Articles on security protocols
+│   │   └── [Various standalone articles]
+│   ├── Standards/              # Security standards documentation
+│   │   ├── example_reports/    # Example security assessment reports
+│   │   └── [Standard documentation files]
 │   ├── 1_Broken_Access_Control/ through 10_Server_Side_Request_Forgery/  # OWASP Top 10 (2021)
-│   ├── _General/               # General security notes
-│   ├── cryptography/           # Notes on cryptographic concepts
-│   ├── Thread Modelling/       # Threat modeling content (alternate spelling)
+│   ├── General/                # General security notes
+│   ├── Social_Engineering_Attacks/ # Social engineering and phishing content
 │   ├── Threat Modelling/       # Threat modeling content
-│   └── images/                 # Images used in notes
-├── OWASP Cheatsheets/          # Reference cheatsheets from OWASP
-│   └── [90+ cheatsheet files]
+│   ├── OWASP Cheatsheets/      # Reference cheatsheets from OWASP
+│   │   └── [90+ cheatsheet files]
+│   └── _THE_NOTE_.md           # Temporary note file for content to be organized
 └── [Project files]
     ├── update_dictionary.py    # Script to maintain the dictionary
     ├── update_dictionary_guide.md  # Guide for using the dictionary update script
@@ -131,4 +151,4 @@ Located in `/_content/dictionary.md`:
 
 ---
 
-*This index was automatically generated and is updated periodically.* 
+*This index was last updated on [current date]. Please ensure it remains up-to-date as the project structure evolves.* 

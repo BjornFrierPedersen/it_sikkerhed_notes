@@ -114,15 +114,17 @@ def scan_for_terms(file_path, dictionary_terms):
         elif term not in dictionary_terms:
             new_terms.add(term)
     
-    # Search for CamelCase terms
+    # Search for CamelCase terms - ONLY for linking, not adding to dictionary
+    camel_case_terms = set()
     camel_case_matches = re.finditer(CAMEL_CASE_PATTERN, content)
     for match in camel_case_matches:
         term = match.group(0)
-        if term not in dictionary_terms and term not in EXCLUDED_TERMS:
-            new_terms.add(term)
+        if term not in EXCLUDED_TERMS:
+            camel_case_terms.add(term)
     
     # Update content with dictionary links
     updated_content = content
+    # First, process terms from the dictionary
     for term in dictionary_terms:
         # Skip excluded terms
         if term in EXCLUDED_TERMS:
@@ -170,6 +172,32 @@ def scan_for_terms(file_path, dictionary_terms):
             paragraphs[i] = paragraph
         
         updated_content = '\n\n'.join(paragraphs)
+    
+    # Now, process CamelCase terms that already exist in the dictionary
+    for term in camel_case_terms:
+        if term in dictionary_terms:
+            section = term[0].upper()
+            link_format = f"[[_content/dictionary#{section}|{term}]]"
+            
+            paragraphs = re.split(r'\n\s*\n', updated_content)
+            for i, paragraph in enumerate(paragraphs):
+                # Skip if already contains the link for this term
+                if f"[[_content/dictionary#{section}|{term}]]" in paragraph:
+                    continue
+                
+                # Skip tables
+                if '|' in paragraph and '\n' in paragraph and (
+                    re.search(r'^\s*\|', paragraph, re.MULTILINE) or 
+                    re.search(r'\|\s*$', paragraph, re.MULTILINE) or
+                    re.search(r'[-:]+\s*\|\s*[-:]+', paragraph)):
+                    continue
+                
+                # Replace first occurrence only in this paragraph
+                pattern = r'\b' + re.escape(term) + r'\b'
+                paragraph = re.sub(pattern, link_format, paragraph, count=1)
+                paragraphs[i] = paragraph
+            
+            updated_content = '\n\n'.join(paragraphs)
     
     # Special handling for compound terms like TCP/IP after all individual terms are processed
     # Find and process compound terms with slashes
