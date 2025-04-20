@@ -6,7 +6,7 @@ This dictionary contains explanations of common abbreviations found in the cyber
 - **AAAAA**: American Association Against Acronym Abuse - A humorous example used in security training to illustrate excessive use of acronyms, while also serving as a placeholder in testing for buffer overflow attacks.
 - **AAEAAAD**: A hexadecimal pattern commonly found in memory dumps during security analysis, often associated with memory allocation patterns or potential buffer overflow vulnerabilities.
 - **ABOUT**: In web security contexts, a URI scheme (about:) used in browsers to display internal browser pages, which can be leveraged in certain browser-based vulnerabilities and phishing attacks.
-- **ACAT**: Acquisition Category - A classification system used in defense and government procurement to categorize the scale and complexity of IT acquisitions, with implications for security requirements and evaluation.
+- **ACAT**: Acquisition Category - A classification system used in defense and government procurement to categorize the scale and complexity of IT acquisitions, with implications for security requirements; or in risk management, an acronym for risk treatment options: Avoid, Control, Accept, Transfer.
 - **AA**: Authentication and Authorization - The twin processes of verifying identity (authentication) and determining access permissions (authorization).
 - **AAA**: Authentication, Authorization, and Accounting - A security framework that controls access to computer resources, enforces policies, audits usage, and provides information for billing and security analysis.
 - **AAAA**: Authentication, Authorization, Accounting, and Auditing - An extension of AAA that emphasizes the importance of ongoing security review through auditing.
@@ -398,6 +398,9 @@ This dictionary contains explanations of common abbreviations found in the cyber
 - **CyberArk**: A company specializing in privileged access management and security solutions to protect against cyber threats targeting privileged accounts.
 - **SC**: Security Controls - Safeguards or countermeasures prescribed for an information system to protect the confidentiality, integrity, and availability of the system and its information.
 - **SMS**: Short Message Service - A text messaging service component of most telephone, Internet, and mobile device systems. In cybersecurity, SMS is often used for multi-factor authentication but has security vulnerabilities that make it less secure than other authentication methods.
+- **PARK**: In security contexts, a reserved configuration setting or state that temporarily holds or stores data that requires protection.
+- **PARKERIAN HEXAD**: An expanded model of information security attributes that builds upon the CIA Triad by adding three additional elements. The six components are: Confidentiality, Integrity, Availability (from the CIA Triad), plus Authenticity, Possession/Control, and Utility. This model provides a more comprehensive framework for evaluating information security.
+- **PARTITION**: A logical division of storage or memory that isolates resources for security purposes.
 
 ## D
 - **DOCX**: Document XML - A file format for Microsoft Word documents that can contain embedded macros which may pose security risks if not properly validated.
@@ -1072,6 +1075,8 @@ This dictionary contains explanations of common abbreviations found in the cyber
 - **RFID**: Radio-Frequency Identification - A technology that uses electromagnetic fields to automatically identify and track tags attached to objects, with security implications for access control and data privacy.
 - **RI**: Risk Index - A quantitative measure used to evaluate and compare the level of risk between different systems, assets, or scenarios; helps prioritize security efforts.
 - **RISK**: The potential for loss, damage, or compromise of assets or information systems, calculated as a function of threat likelihood, vulnerability severity, and potential impact. A central concept in cybersecurity management and decision-making.
+- **RISK APPETITE**: The level of risk an organization is willing to accept in pursuit of its objectives. Typically categorized as minimal (preferring ultra-safe options), open (balancing risk with reward), or hungry (accepting greater risks to achieve higher rewards). Risk appetite may vary across different areas of an organization and can change based on circumstances.
+- **RISK TOLERANCE**: The specific amount of loss or deviation an organization is willing to withstand before taking action, regardless of general risk appetite. Risk tolerance defines thresholds beyond which risks become unacceptable, such as maximum acceptable downtime for critical systems or potential loss of customer data.
 - **RMF**: Risk Management Framework - A structured approach developed by NIST for managing organizational risk through the identification, assessment, and monitoring of security controls in information systems.
 - **RN**: Release Notes - Documentation that accompanies software updates detailing security fixes, patches, and vulnerability remediation implemented in the new version.
 - **RO**: Read Only - A permission setting that allows users to view but not modify data or resources, an important access control mechanism for protecting sensitive information.

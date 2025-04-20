@@ -74,6 +74,13 @@ Located in `/Notes/General/` and `/Notes/Articles/`:
 - Password security
 - Network security (VPN, Wireless)
 - Protocols
+- Security Models
+  - Parkerian Hexad
+- Emerging Technologies
+  - AI in Security
+- Risk Management
+  - Risk Appetite and Tolerance
+  - ACAT Framework
 
 ## Reference Materials
 
