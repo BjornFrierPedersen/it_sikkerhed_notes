@@ -1,9 +1,11 @@
-# Update Project Index Rule
-Description: Update the project index whenever new files have been added to the vault
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Update Index Rule
 
-## When This Rule Applies
-- **Path Pattern**: `**/*.md`
-- **Match Pattern**: When a user writes "update the index" or "update project index"
+- **Match Pattern**: When a user writes "update the index" or "update project index" or "update index"
 
 ## Instructions
 
@@ -11,31 +13,73 @@ Description: Update the project index whenever new files have been added to the 
 
 When a user requests to update the index, follow these steps:
 
-1. First check the current project structure using list_dir on key directories
-2. Compare the found structure with what's currently in _content/project_index.md
-3. Identify any new files, directories, or content areas that should be included
-4. Update the project_index.md file to reflect the current state of the vault
-5. Provide a summary of the changes made to the index
+1. First read the .gitignore file to identify excluded patterns and directories
+2. Check the current project structure using list_dir on key directories, excluding .gitignore patterns
+3. Compare the found structure with what's currently in _content/project_index.md
+4. Identify any new files, directories, or content areas that should be included
+5. Update the project_index.md file to reflect the current state of the vault
+6. Provide a summary of the changes made to the index
 
 ## Process
 
+### Initial Setup
+- Read the .gitignore file to create a list of excluded patterns
+- Ensure that no excluded files or directories are processed
+- Handle common ignore patterns like:
+  - Build directories
+  - Temporary files
+  - System files (e.g., .DS_Store)
+  - IDE configuration files
+
+### Project Structure Analysis
 - Explore the project structure using list_dir to catalog all content areas
   - Start with the root directory
   - Examine key directories: Notes, Articles, OWASP Cheatsheets, _content
   - Check for any new directories or patterns of content
+  - Skip any directories or files matching .gitignore patterns
 - Read the current project_index.md file
 - Identify differences between the actual project structure and the index
+
+### Index Update
 - Update the index to include:
   - New content areas
   - New directories or files that represent important topics
   - Updated statistics (if applicable)
   - Any structural changes
 - Maintain the existing organization and formatting of the index
-- Provide a concise summary of what was added or changed in the index
+- Ensure no ignored files or directories are included in the index
+- Provide a concise summary of what was added or changed
+
+### Quality Checks
+- Verify that no .gitignore patterns were accidentally included
+- Ensure all paths in the index are valid and accessible
+- Check that the index maintains its hierarchical structure
+- Validate all links and references
 
 ## Example
 
 **Query**: "update the index"
 
 **Expected Response**:  
-"I'm updating the project index to reflect the current state of the vault." Followed by a summary of how the index was updated, what new content areas were added, and confirmation of successful update. 
+"I'm updating the project index to reflect the current state of the vault." 
+
+1. First, I'll check the .gitignore patterns:
+   ```
+   Reading .gitignore...
+   Identified excluded patterns...
+   ```
+
+2. Then analyze the project structure:
+   ```
+   Scanning directories...
+   Found new content in...
+   ```
+
+3. Finally, update the index:
+   ```
+   Updated sections...
+   Added new content areas...
+   Verified against .gitignore...
+   ```
+
+Followed by a summary of how the index was updated, what new content areas were added, and confirmation of successful update.

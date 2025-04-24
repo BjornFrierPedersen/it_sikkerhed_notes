@@ -5,56 +5,47 @@ This document serves as a master index for the entire vault, providing a quick r
 ## Core Content Areas
 
 ### 1. OWASP Top 10 (2021) - Study Notes
-Located in `/Notes/[number]_[vulnerability name]` folders:
+Located in `/Notes/General/`:
 
-1. **Broken Access Control** - `/Notes/1_Broken_Access_Control/`
+1. **Broken Access Control** - `/Notes/General/1_Broken_Access_Control/`
    - Authorization failures, privilege escalation, and access control vulnerabilities
    
-2. **Cryptographic Failures** - `/Notes/2_Cryptographic_Failures/`
+2. **Cryptographic Failures** - `/Notes/General/2_Cryptographic_Failures/`
    - Failures related to cryptography that lead to sensitive data exposure
    
-3. **Injection** - `/Notes/3_Injection/`
+3. **Injection** - `/Notes/General/3_Injection/`
    - SQL, NoSQL, OS, and LDAP injection flaws
    
-4. **Insecure Design** - `/Notes/4_Insecure_Design/`
+4. **Insecure Design** - `/Notes/General/4_Insecure_Design/`
    - Flaws in design and architecture
    
-5. **Security Misconfiguration** - `/Notes/5_Security_Misconfiguration/`
+5. **Security Misconfiguration** - `/Notes/General/5_Security_Misconfiguration/`
    - Improper configuration of applications, frameworks, servers
    
-6. **Vulnerable & Outdated Components** - `/Notes/6_Vulnerable_Outdated_Components/`
+6. **Vulnerable & Outdated Components** - `/Notes/General/6_Vulnerable_Outdated_Components/`
    - Use of libraries, components with known vulnerabilities
    
-7. **Identification & Authentication Failures** - `/Notes/7_Identification_Authentication_Failures/`
+7. **Identification & Authentication Failures** - `/Notes/General/7_Identification_Authentication_Failures/`
    - Broken authentication, session management
    
-8. **Software & Data Integrity Failures** - `/Notes/8_Software_Data_Integrity_Failures/`
+8. **Software & Data Integrity Failures** - `/Notes/General/8_Software_Data_Integrity_Failures/`
    - CI/CD pipeline issues, unsigned code, insecure deserialization
    
-9. **Security Logging & Monitoring Failures** - `/Notes/9_Security_Logging_Monitoring_Failures/`
+9. **Security Logging & Monitoring Failures** - `/Notes/General/9_Security_Logging_Monitoring_Failures/`
    - Insufficient logging, detection, and response
    
-10. **Server-Side Request Forgery** - `/Notes/10_Server_Side_Request_Forgery/`
+10. **Server-Side Request Forgery** - `/Notes/General/10_Server_Side_Request_Forgery/`
     - SSRF vulnerabilities and prevention
 
 ### 2. Threat Modeling
-Located in `/Notes/Threat Modelling/`:
+Located in `/Notes/General/Threat Modelling/`:
 
 - **STRIDE Framework** - Documented with diagrams
   - Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, Elevation of Privilege
 - **Threat Modeling Process** - General methodology and approach
 
-### 3. Cryptography
-Located in `/Notes/Articles/Cryptography/`:
-
-- Implementation types
-- Cryptographic concepts 
-- Public key infrastructure
-- Asymmetric encryption
-- Problems cryptography solves
-
-### 4. Social Engineering & Phishing Attacks
-Located in `/Notes/Social_Engineering_Attacks/`:
+### 3. Social Engineering & Phishing Attacks
+Located in `/Notes/General/Social_Engineering_Attacks/`:
 
 - What is social engineering and its various types
   - Piggybacking, Shoulder surfing, Baiting, Dumpster diving, Tailgating
@@ -63,24 +54,57 @@ Located in `/Notes/Social_Engineering_Attacks/`:
 - Phishing kits and tools
 - Prevention and mitigation strategies
 
-### 5. General Security Concepts
-Located in `/Notes/General/` and `/Notes/Articles/`:
+### 4. Articles and Core Topics
+Located in `/Notes/Articles/`:
 
-- Windows Access Controls
-- Security by Design Principles
-- Defence in Depth
-- Secure Coding
-- Defensive Programming
-- Password security
-- Network security (VPN, Wireless)
-- Protocols
-- Security Models
-  - Parkerian Hexad
-- Emerging Technologies
-  - AI in Security
-- Risk Management
-  - Risk Appetite and Tolerance
-  - ACAT Framework
+- **Network Security**
+  - VPN (Virtual Private Networks)
+  - Wireless Networks
+  
+- **Security Principles and Practices**
+  - Security By Design Principles
+  - Defence in Depth
+  - Secure Coding
+  - Defensive Programming
+  
+- **Access Security**
+  - Password Security and Management
+  
+- **Risk Management**
+  - Risk Matrix
+  - Cybersecurity for Board & Management
+
+- **Protocols**
+  - Located in `/Notes/Articles/Protocols/`
+  
+- **Cryptography**
+  - Located in `/Notes/Articles/Cryptography/`
+
+### 5. Models and Templates
+Located in `/Notes/Models & Templates/`:
+
+- **Risk Assessment**
+  - Templates and methodologies for risk assessment
+
+### 6. Standards Documentation
+Located in `/Notes/Standards/`:
+
+- Security standards documentation
+- Implementation guidelines
+- Best practices
+
+### 7. OWASP Resources
+Located in `/Notes/OWASP Cheatsheets/`:
+
+- Collection of OWASP security cheatsheets
+- Implementation guides
+- Security best practices
+
+### 8. General Security Notes
+Located in `/Notes/General/_General/`:
+
+- General security concepts
+- Miscellaneous security documentation
 
 ## Reference Materials
 
@@ -158,4 +182,4 @@ Located in `/Notes/Standards/`:
 
 ---
 
-*This index was last updated on [current date]. Please ensure it remains up-to-date as the project structure evolves.* 
+*This index was last updated on 24-04-2025. Please ensure it remains up-to-date as the project structure evolves.* 
