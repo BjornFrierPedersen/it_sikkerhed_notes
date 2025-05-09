@@ -33,6 +33,8 @@ Source: https://complianceforge.com/governance-risk-compliance-grc-content/
 - Model: ICM focuses on controls as the central point for cybersecurity and privacy operations.
 - Definition: ICM is a holistic, technology-agnostic approach to cybersecurity and data protection controls, covering people, processes, technology, and data.
 
+![Integrated Controls Management](/Notes/Articles/GRC/images/integrated_control_management.png)
+
 ## PDCA Process
 - Plan, Do, Check & Act (PDCA): A continuous process to evaluate risks, threats, and performance trends.
 - Phases:
